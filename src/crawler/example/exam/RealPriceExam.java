@@ -24,7 +24,7 @@ public class RealPriceExam {
 		
 		String uri = "zip:http://plvr.land.moi.gov.tw"
 				+ "/Download?type=zip&fileName=lvr_landxml.zip"
-				+ "!/A_LVR_LAND_A.XML";
+				+ "!/E_LVR_LAND_A.XML";
 
 
 		Document jsoupDoc = CrawlerPack.start()
@@ -42,7 +42,8 @@ public class RealPriceExam {
 			System.out.print(",\""+elem.select("土地區段位置或建物區門牌").text()+"\"");
 			System.out.print(","+elem.select("總價元").text());
 			System.out.print(","+elem.select("單價每平方公尺").text());
-			System.out.println();
+			System.out.println(","+elem.select("車位類別").text());
+			System.out.println(","+elem.select("總樓層數").text());
 		}
 
 
