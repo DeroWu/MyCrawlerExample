@@ -40,11 +40,12 @@ public class FacebookExam {
 		for( Element data: elems ){
 			String id = data.select("id").text();
 			String message = data.select("message").text();
+			String createdtime = data.select("created_time").text();
 			// FIXIT
 			String reactions = data.select("reactions total_count").text();
 
 
-			output +="\n"+id +","+message+","+reactions + "\n";
+			output +="\n"+id +","+createdtime+","+message+","+reactions + "\n";
 		}
 
 		System.out.println( output );
