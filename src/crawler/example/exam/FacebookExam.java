@@ -34,7 +34,7 @@ public class FacebookExam {
 				.getFromJson(uri)
 				.select("data");
 		
-		String output = "id,reactions";
+		String output = "id,message,reactions";
 
 		// 遂筆處理
 		for( Element data: elems ){
@@ -44,7 +44,7 @@ public class FacebookExam {
 			String reactions = data.select("reactions total_count").text();
 
 
-			output += id + "," +message+"," + reactions + "\n";
+			output +="\n"+id +","+message+","+reactions + "\n";
 		}
 
 		System.out.println( output );
