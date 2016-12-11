@@ -36,8 +36,9 @@ public class PttExam {
 			    //.getFromXml(uri)
 			    
 			    // 這兒開始是 Jsoup Document 物件操作
-			   	 .select(".push-tag:containsOwn(噓)~.push-content")
-			   		.select("[href $='.jpg']")
+			   .select(".push-tag:containsOwn(噓)~.push-content")
+				 //.select("[href $='.jpg']")
+
 		);
 	}
 }
