@@ -75,7 +75,7 @@ public class PM25ElasticImport {
                     "}";
 
 
-
+            //System.out.println(elasticJson);
             System.out.println(
             // curl -XPOST http://localhost:9200/pm25/data -d '{...}'
             sendPost("http://" + elasticHost + ":" + elasticPort
